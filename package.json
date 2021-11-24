@@ -1,6 +1,6 @@
 {
-  "name": "dc6png",
-  "version": "1.0.2",
+  "name": "dc6png_meta",
+  "version": "1.0.3",
   "description": "batch convert diablo 2 dc6 format to png",
   "main": "src/index.js",
   "bin": {

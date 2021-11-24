@@ -65,6 +65,15 @@ function processFile(file) {
         frame.transform(global.transforms[argv.c]);
       }
       DEBUG(JSON.stringify(frame.header));
+
+      // meta file including width, height, offsetX, offsetY
+      const metaFile = path.resolve(path.join(argv.o ? argv.o : p.dir, `${p.name}.meta`));
+      const metaData = `${frame.header.width}, ${frame.header.height}, ${frame.header.offsetX}, ${frame.header.offsetY}\n`
+      if(i==0&j==0)
+        fs.writeFileSync(metaFile, metaData);
+      else
+        fs.appendFileSync(metaFile, metaData);
+
       const image = getImageData(frame, global.palette);
       for(const mediaType of argv.m) {
         if(!OUTPUT_TYPES[mediaType]) {
