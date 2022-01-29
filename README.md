@@ -26,6 +26,11 @@ Options:
 
 Examples
 
+Single file (After moving to the cloned directory)
+```
+dc6png -p example/pal.dat -f example/TYTRLITWLHTH.DC6 -o example/
+```
+
 Directory
 ```
 dc6png -p ~/diablo/data/global/palette/ACT1/pal.dat \
